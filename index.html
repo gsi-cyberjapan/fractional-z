@@ -34,7 +34,7 @@ var map = L.map('mapdiv', {
 
 var hash = L.hash(map);
 L.control.layers({'地理院タイル（標準地図）': std}).addTo(map);
-L.control.scale({imperial: false, maxWidth: 500}).addTo(map);
+L.control.scale({imperial: false, maxWidth: 280}).addTo(map);
 
 var range = document.getElementById('range');
 if(document.location.href.indexOf('#') != -1) {
