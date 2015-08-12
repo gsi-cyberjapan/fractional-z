@@ -37,7 +37,9 @@ L.control.layers({'地理院タイル（標準地図）': std}).addTo(map);
 L.control.scale({imperial: false, maxWidth: 500}).addTo(map);
 
 var range = document.getElementById('range');
-range.value = Number(document.location.href.split('#')[1].split('/')[0]);
+if(document.location.href.includes('#')) {
+  range.value = Number(document.location.href.split('#')[1].split('/')[0]);
+}
 function z() {
   map.setZoom(range.value);
 }
